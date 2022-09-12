@@ -11,7 +11,7 @@
 Metadata sample:
 Metadata : 
 
-Goblet opensea : 
+NFT opensea : 
 
 Useful scripts:
 
