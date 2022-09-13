@@ -31,12 +31,12 @@ contract R00TsMinter is ERC721Enumerable, Ownable {
     mapping(address => uint256) public ownerOfnfts;
 
     // Added setBaseURI feature in constructor for metadata
-    constructor() ERC721("TEST NFT", "RTS") {
-        owner1 = 0x8eFCc2E0E410380e4420db35439f7b22BA3B7B1a;
-        owner2 = 0x8eFCc2E0E410380e4420db35439f7b22BA3B7B1a;
-        team = 0x8eFCc2E0E410380e4420db35439f7b22BA3B7B1a;
+    constructor() ERC721("R00ts Yacht Club", "RTS") {
+        owner1 = 0x48CEEB78e134F580D56990A77D54240ea9CbC4C3;
+        owner2 = 0x2d4F4B7D7D0454170cd1394cf8b70Aa65cd2F02d;
+        team = 0x2D751a936E6f59CaF65097E2a8E737ccf9eA25de;
         setBaseURI("ipfs://Qmf4GeJzDMxrLKUo3CF6VaVUk4gFK5Edz2YADRnqEwfu9N/");
-        // baseURI = "ipfs://Qmf4GeJzDMxrLKUo3CF6VaVUk4gFK5Edz2YADRnqEwfu9N/";
+        _tokenIdCounter.increment();
     }
 
     modifier onlyTeam() {
@@ -80,7 +80,7 @@ contract R00TsMinter is ERC721Enumerable, Ownable {
     function mintTeam() external onlyTeam {
         //Add a condiion here to check if they are a member of the team
         teamMint(team);
-        if (totalMinted > 5000) {
+        if (totalMinted >= 5000) {
             revert TotalSupplyReached();
         }
         if (ownerOfnfts[msg.sender] >= 150) {
