@@ -9,9 +9,9 @@
   
 
 Metadata sample:
-Metadata : 
+Metadata : https://gateway.pinata.cloud/ipfs/Qmf4GeJzDMxrLKUo3CF6VaVUk4gFK5Edz2YADRnqEwfu9N/1.json
 
-NFT opensea : 
+NFT opensea : https://testnets.opensea.io/collection/test-nft-yomm0cnuth
 
 Useful scripts:
 
